@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "954304316012",
+    "project_id": "kenkyuu2023",
+    "storage_bucket": "kenkyuu2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954304316012:android:943502662bb0291076ce49",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVI217e_tgEL-oWsfISkksi8hKEbJhwyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
