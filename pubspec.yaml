@@ -35,6 +35,8 @@ dependencies:
   adaptive_dialog: ^1.9.0
   logger: ^2.0.1
   flutter_svg: ^1.0.3
+  cloud_firestore: ^4.9.2
+  firebase_core: ^2.16.0
 
 
   # The following adds the Cupertino Icons font to your application.
