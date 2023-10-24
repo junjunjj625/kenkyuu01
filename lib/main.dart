@@ -67,7 +67,16 @@ Future<LatLng> getCurrentLocation() async {
 //mapを表示する
 Future<void> main() async {
   // Fireabse初期化
-  await Firebase.initializeApp();
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyBVI217e_tgEL-oWsfISkksi8hKEbJhwyE", // Your apiKey
+      appId: "1:954304316012:android:5e6321dee28c768976ce49", // Your appId
+      messagingSenderId: "", // Your messagingSenderId
+      projectId: "", // Your projectId
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -116,6 +125,7 @@ class MapSampleState extends State<MapSample> {
 
   BitmapDescriptor? _markerIcon;
 
+
   Future<LatLng> _initAsync(BuildContext context) async {
     await _loadPinAsset();
 
@@ -156,15 +166,19 @@ class MapSampleState extends State<MapSample> {
           myLocationEnabled: true,
           onMapCreated: (GoogleMapController controller) {
             _controller.complete(controller);
+
           },
+
           markers: Set<Marker>.of(<Marker>{_createMarker()}),
         );
       },
+
     );
   }
 }
 
-class MyFirestorePage extends StatefulWidget {
+
+/*class MyFirestorePage extends StatefulWidget {
   @override
   _MyFirestorePageState createState() => _MyFirestorePageState();
 }
@@ -212,7 +226,7 @@ class _MyFirestorePageState extends State<MyFirestorePage> {
                   await FirebaseFirestore.instance.collection('users').get();
                 // 取得したドキュメント一覧をUIに反映
                 setState(() {
-                  documentList = snapshot.documents;
+                  documentList = snapshot.docs;
                 });
               },
             ),
@@ -272,4 +286,4 @@ class _MyFirestorePageState extends State<MyFirestorePage> {
     );
   }
 }
-
+*/

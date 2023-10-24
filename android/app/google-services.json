@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:954304316012:android:943502662bb0291076ce49",
+        "mobilesdk_app_id": "1:954304316012:android:5e6321dee28c768976ce49",
         "android_client_info": {
-          "package_name": "com.android.application"
+          "package_name": "com.example.kenkyuu01"
         }
       },
       "oauth_client": [],
